@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>DOGGY CENTRAL</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>DOGGY CENTRAL LOGIN</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome To Doggy Central</h3>
+    <p id="user_para">Welcome to Doggy Central</p><br> <br>
+    <button onclick="logout()">Logout</button>
+    <a href="../Project1.html"> Please click this link to go to the website</a>
+  </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCWt2MnYckJtgoavIW20a-zI1fes5ZiSQk",
+    authDomain: "contactform-141d0.firebaseapp.com",
+    databaseURL: "https://contactform-141d0.firebaseio.com",
+    projectId: "contactform-141d0",
+    storageBucket: "contactform-141d0.appspot.com",
+    messagingSenderId: "898668659160"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="index.js"></script>
+
+<div>
+           <h2>Upload File</h2>
+           <label class=“upload-group”>
+               Upload File
+               <input type=“file” class=“upload-group” id=“file”>
+           </label>
+           <button type=“button” id=“uploadButton” onclick=“uploadFile()“>Submit</button>
+       </div>
+</body>
+</html>
